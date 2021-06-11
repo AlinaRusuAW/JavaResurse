@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>CarApp</title>
+</head>
+<body>
+<h1>Masina mea</h1>
+<p>Distanta: <span th:text="${car.currentDistance}"/>  km</p>
+<p>Combustibil disponibil: <span th:text="${car.fuel}"/>  litri</p>
+<form action="/cars" method="GET">
+    <label>Distance </label>
+    <input name="distance" type="text">
+    <input type="submit" value="Drive"/>
+</form>
+<br>
+<form action="/cars/supply" method="GET">
+    <label>Fuel </label>
+    <input name="fuel" type="text">
+    <input type="submit" value="Supply"/>
+</form>
+<br>
+<form action="/cars/stop" method="GET">
+    <input type="submit" value="Stop"/>
+</form>
+<br>
+<div th:each="msg: ${msgList}">
+    <p th:text="${msg}"/>
+</div>
+</body>
+</html>

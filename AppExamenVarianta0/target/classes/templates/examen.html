@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Examen</title>
+</head>
+<body>
+<h1>Salut Examen Varianta 0</h1>
+
+<form action="/" method="GET">
+    <label>Introduceti distanta in mile</label>
+    <input name="mile" type="text">
+    <input type="submit" value="Convert in km"/>
+    <p>Mesaj:  <span th:text="${examen.currentMessage}"/></p>
+</form>
+
+</body>
+</html>
